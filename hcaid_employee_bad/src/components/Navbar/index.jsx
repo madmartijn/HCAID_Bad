@@ -9,16 +9,16 @@ function NavBar(props) {
     return (
 <div className="navbar">
             <Toolbar className="bar">
-                <Button size="large" className="menuButton" onClick={() => { navigate("/HCAID-Employee") }}>
+                <Button size="large" className="menuButton" onClick={() => { navigate("/HCAID_Bad") }}>
                     Home
                 </Button>
-                <Button size="large" className="menuButton" onClick={() => { navigate("/HCAID-Employee/Predict") }}>
+                <Button size="large" className="menuButton" onClick={() => { navigate("/HCAID_Bad/Predict") }}>
                 Predict
                 </Button>
-                <Button size="large"  className="menuButton" onClick={() => { navigate("/HCAID-Employee/HowItWorks") }}>
+                <Button size="large"  className="menuButton" onClick={() => { navigate("/HCAID_Bad/HowItWorks") }}>
                 How It Works
                 </Button>
-                <Button size="large" className="menuButton" onClick={() => {  navigate("/HCAID-Employee/Feedback")}}>
+                <Button size="large" className="menuButton" onClick={() => {  navigate("/HCAID_Bad/Feedback")}}>
                 Feedback
                 </Button>
             </Toolbar>

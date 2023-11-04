@@ -12,7 +12,7 @@ function Intro(props) {
             <p>With the use of this app you can predict if an employee of yours is going to quit or not!
                 Start predicting now!
             </p>
-            <Button size="large" className="startButton" variant="contained" onClick={() => { navigate("/HCAID-Employee/Predict") }}>
+            <Button size="large" className="startButton" variant="contained" onClick={() => { navigate("/HCAID_Bad/Predict") }}>
                 Start Prediction!
                 </Button>
         </div >

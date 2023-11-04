@@ -1,7 +1,7 @@
 {
   "name": "hcaid_employee",
   "version": "0.1.0",
-  "homepage": "https://jaspervanes-github.github.io/HCAID-Employee/",
+  "homepage": "https://madmartijn.github.io/HCAID_Bad/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.4",
