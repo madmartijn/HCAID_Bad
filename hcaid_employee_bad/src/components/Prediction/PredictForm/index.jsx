@@ -8,6 +8,11 @@ import WaterfallGraph from '../../WaterfallGraph';
 
 
 function PredictForm(props) {
+    const [name, setName] = useState('');
+    const [city, setCity] = useState('');
+    const [address, setAddress] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+
     const [joiningYear, setJoiningYear] = useState('');
     const [paymentTier, setPaymentTier] = useState('');
     const [age, setAge] = useState('');
@@ -33,10 +38,10 @@ function PredictForm(props) {
         <div className='predictForm'>
             <div className="predictQuestions">
                 <h1>Make a Prediction</h1>
-                <PredictField question="What is the name of the employee?" />
-                <PredictQuestion question="In which city does the employee live?" setValue={''} options={livingOptions} />
-                <PredictField question="What is the address of the employee?" />
-                <PredictField question="What is the phoneNumber of the employee?" />
+                <PredictField question="What is the name of the employee?" setValue={setName}/>
+                <PredictQuestion question="In which city does the employee live?" setValue={setCity} options={livingOptions} />
+                <PredictField question="What is the address of the employee?" setValue={setAddress}/>
+                <PredictField question="What is the phone number of the employee?" setValue={setPhoneNumber}/>
                 <PredictQuestion question="What year did the employee join the company?" setValue={setJoiningYear} options={joiningYearOptions} />
                 <PredictQuestion question="In what payment tier is the employee(0-3)?" setValue={setPaymentTier} options={paymentTierOptions} />
                 <PredictQuestion question="What age is the employee?" setValue={setAge} options={ageOptions} />
@@ -47,6 +52,10 @@ function PredictForm(props) {
             </div >
             <Button variant="contained" onClick={function (e) {
                 handleSubmit({
+                    Name: name,
+                    City: city,
+                    Address: address,
+                    PhoneNumber: phoneNumber,
                     JoiningYear: joiningYear,
                     PaymentTier: paymentTier,
                     Age: age,

@@ -7,7 +7,7 @@ function PredictField(props) {
     return (
         <div className="predictField">
             <label >{props.question}</label>
-            <input type="text" />
+            <input type="text" onChange={function(event){props.setValue(event.target.value)}}/>
         </div >
     )
 }
