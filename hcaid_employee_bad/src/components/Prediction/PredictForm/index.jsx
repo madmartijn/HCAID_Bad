@@ -5,6 +5,7 @@ import PredictField from '../PredictField';
 import { toast } from 'react-toastify';
 import { Button } from '@material-ui/core';
 import WaterfallGraph from '../../WaterfallGraph';
+import PredictionResult from '../PredictionResult';
 
 
 function PredictForm(props) {
@@ -21,8 +22,7 @@ function PredictForm(props) {
     const [experience, setExperience] = useState('');
     const [education, setEducation] = useState('');
 
-    const [showGraph, setShowGraph] = useState(false);
-    const [graphData, setGraphData] = useState(null);
+    const [predictionResult, setPredictionResult] = useState('');
 
     const livingOptions = [{ label: "Breda", value: 0}, { label: "Tilburg", value: 1}, { label: "Amsterdam", value: 2}, { label: "Rotterdam", value: 3}, { label: "Maastricht", value: 4}];
     const joiningYearOptions = [];
@@ -63,13 +63,12 @@ function PredictForm(props) {
                     EverBenched: everBenched,
                     Experience: experience,
                     Education: education,
-                }, setGraphData, setShowGraph)
+                }, setPredictionResult)
             }}>Make Prediction</Button>
 
-            {showGraph && graphData && (
-                <div className="graphContainer">
-                    <h2>Shap Waterfall Plot</h2>
-                    <div dangerouslySetInnerHTML={{ __html: graphData }} />
+            {predictionResult && (
+                <div className='predictResult'>
+                    <PredictionResult predictionResult={predictionResult} />
                 </div>
             )}
         </div>
@@ -99,7 +98,7 @@ function generateOptions(joiningYearOptions, ageOptions, experienceOptions) {
     }
 }
 
-async function handleSubmit(inputs, setGraphData, setShowGraph) {
+async function handleSubmit(inputs, setPredictionResult) {
     let hasEmpty = false;
     for (var key in inputs) {
         if (inputs[key] === null || inputs[key] === undefined || inputs[key] === "") {
@@ -136,22 +135,19 @@ async function handleSubmit(inputs, setGraphData, setShowGraph) {
 
         if (response.ok) {
             const result = await response.json();
-            console.log(result.shap_values[0]);
-            //TODO: Shap Graph
-            let mySvg = WaterfallGraph([
-                "JoiningYear",
-                "PaymentTier",
-                "Age",
-                "Gender",
-                "EverBenched",
-                "Experience",
-                "EducationBachelor",
-                "EducationMaster",
-                "EducationPHD"
-            ],
-                result.shap_values[0]);
-            setGraphData(mySvg);
-            setShowGraph(true);
+            
+            setPredictionResult(result);
+
+            toast.success('Prediction Successful: Scroll down to see prediction!', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
         } else {
             //TODO Netter maken
             throw new Error('Failed to fetch data');
