@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/HCAID_Bad/static/css/main.d96393a1.css",
+    "main.js": "/HCAID_Bad/static/js/main.cd9082ef.js",
+    "static/js/787.9e83f964.chunk.js": "/HCAID_Bad/static/js/787.9e83f964.chunk.js",
+    "static/media/BadTree.svg": "/HCAID_Bad/static/media/BadTree.0a99065a8fe973f9e1c8b252a7f2e1b7.svg",
+    "static/media/BadTree_D2.png": "/HCAID_Bad/static/media/BadTree_D2.df1019a37471625bca21.png",
+    "static/media/BadTree_D1.png": "/HCAID_Bad/static/media/BadTree_D1.224897f9ffb9916d9a41.png",
+    "static/media/Background_Transparent.png": "/HCAID_Bad/static/media/Background_Transparent.cf95c997b3767b1f8a77.png",
+    "index.html": "/HCAID_Bad/index.html",
+    "main.d96393a1.css.map": "/HCAID_Bad/static/css/main.d96393a1.css.map",
+    "main.cd9082ef.js.map": "/HCAID_Bad/static/js/main.cd9082ef.js.map",
+    "787.9e83f964.chunk.js.map": "/HCAID_Bad/static/js/787.9e83f964.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d96393a1.css",
+    "static/js/main.cd9082ef.js"
+  ]
+}
