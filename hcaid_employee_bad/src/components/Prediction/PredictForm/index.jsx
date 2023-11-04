@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./index.css";
 import PredictQuestion from '../PredictQuestion';
+import PredictField from '../PredictField';
 import { toast } from 'react-toastify';
 import { Button } from '@material-ui/core';
 import WaterfallGraph from '../../WaterfallGraph';
@@ -18,6 +19,7 @@ function PredictForm(props) {
     const [showGraph, setShowGraph] = useState(false);
     const [graphData, setGraphData] = useState(null);
 
+    const livingOptions = [{ label: "Breda", value: 0}, { label: "Tilburg", value: 1}, { label: "Amsterdam", value: 2}, { label: "Rotterdam", value: 3}, { label: "Maastricht", value: 4}];
     const joiningYearOptions = [];
     const paymentTierOptions = [{ label: "0", value: 0 }, { label: "1", value: 1 }, { label: "2", value: 2 }, { label: "3", value: 3 }];
     const ageOptions = []
@@ -31,6 +33,10 @@ function PredictForm(props) {
         <div className='predictForm'>
             <div className="predictQuestions">
                 <h1>Make a Prediction</h1>
+                <PredictField question="What is the name of the employee?" />
+                <PredictQuestion question="In which city does the employee live?" setValue={''} options={livingOptions} />
+                <PredictField question="What is the address of the employee?" />
+                <PredictField question="What is the phoneNumber of the employee?" />
                 <PredictQuestion question="What year did the employee join the company?" setValue={setJoiningYear} options={joiningYearOptions} />
                 <PredictQuestion question="In what payment tier is the employee(0-3)?" setValue={setPaymentTier} options={paymentTierOptions} />
                 <PredictQuestion question="What age is the employee?" setValue={setAge} options={ageOptions} />
