@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/HCAID_Bad/static/css/main.d96393a1.css",
-    "main.js": "/HCAID_Bad/static/js/main.11eee7b9.js",
+    "main.js": "/HCAID_Bad/static/js/main.e892fd77.js",
     "static/js/787.9e83f964.chunk.js": "/HCAID_Bad/static/js/787.9e83f964.chunk.js",
     "static/media/BadTree.svg": "/HCAID_Bad/static/media/BadTree.0a99065a8fe973f9e1c8b252a7f2e1b7.svg",
     "static/media/BadTree_D2.png": "/HCAID_Bad/static/media/BadTree_D2.df1019a37471625bca21.png",
@@ -9,11 +9,11 @@
     "static/media/Background_Transparent.png": "/HCAID_Bad/static/media/Background_Transparent.cf95c997b3767b1f8a77.png",
     "index.html": "/HCAID_Bad/index.html",
     "main.d96393a1.css.map": "/HCAID_Bad/static/css/main.d96393a1.css.map",
-    "main.11eee7b9.js.map": "/HCAID_Bad/static/js/main.11eee7b9.js.map",
+    "main.e892fd77.js.map": "/HCAID_Bad/static/js/main.e892fd77.js.map",
     "787.9e83f964.chunk.js.map": "/HCAID_Bad/static/js/787.9e83f964.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d96393a1.css",
-    "static/js/main.11eee7b9.js"
+    "static/js/main.e892fd77.js"
   ]
 }
