@@ -13,6 +13,7 @@ function PredictForm(props) {
     const [city, setCity] = useState('');
     const [address, setAddress] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
+    const [bankAccount, setBankAccount] = useState('');
 
     const [joiningYear, setJoiningYear] = useState('');
     const [paymentTier, setPaymentTier] = useState('');
@@ -42,6 +43,7 @@ function PredictForm(props) {
                 <PredictQuestion question="In which city does the employee live?" setValue={setCity} options={livingOptions} />
                 <PredictField question="What is the address of the employee?" setValue={setAddress}/>
                 <PredictField question="What is the phone number of the employee?" setValue={setPhoneNumber}/>
+                <PredictField question="What is the bank account number of the employee?" setValue={setBankAccount}/>
                 <PredictQuestion question="What year did the employee join the company?" setValue={setJoiningYear} options={joiningYearOptions} />
                 <PredictQuestion question="In what payment tier is the employee(0-3)?" setValue={setPaymentTier} options={paymentTierOptions} />
                 <PredictQuestion question="What age is the employee?" setValue={setAge} options={ageOptions} />
@@ -56,6 +58,7 @@ function PredictForm(props) {
                     City: city,
                     Address: address,
                     PhoneNumber: phoneNumber,
+                    BankAccount: bankAccount,
                     JoiningYear: joiningYear,
                     PaymentTier: paymentTier,
                     Age: age,
