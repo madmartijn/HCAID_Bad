@@ -4,7 +4,6 @@ import PredictQuestion from '../PredictQuestion';
 import PredictField from '../PredictField';
 import { toast } from 'react-toastify';
 import { Button } from '@material-ui/core';
-import WaterfallGraph from '../../WaterfallGraph';
 import PredictionResult from '../PredictionResult';
 
 
@@ -79,7 +78,7 @@ function PredictForm(props) {
 }
 
 function generateOptions(joiningYearOptions, ageOptions, experienceOptions) {
-    for (let year = 2023; year >= 1980; year--) {
+    for (let year = 2019; year >= 1980; year--) {
         joiningYearOptions.push({
             label: year.toString(),
             value: year
