@@ -14,6 +14,9 @@ function PredictionResult(props) {
                 <p>
                     <h4>Prediction Result: {prediction ? "True" : "False"}</h4>
                 </p>
+                <p>
+                Please leave us feedback!
+                </p>
         </div >
     )
 }

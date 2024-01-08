@@ -11,6 +11,9 @@ function FeedbackForm(props) {
     const {handleSubmit, items, setItems} = props;
     return (
         <div className="feedbackForm">
+            <p>
+                All data gathered in a prediction can be saved when leaving feedback.
+            </p>
           <TextField
             className="title"
             error ={clickedTitle}

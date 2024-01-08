@@ -8,7 +8,7 @@ function Intro(props) {
     const navigate = useNavigate();
     return (
         <div className="intro">
-            <h1>Welcom to WorkforceWatch,</h1>
+            <h1>Welcome to WorkforceWatch,</h1>
             <p>With the use of this app you can predict if an employee of yours is going to quit or not!
                 Start predicting now!
             </p>

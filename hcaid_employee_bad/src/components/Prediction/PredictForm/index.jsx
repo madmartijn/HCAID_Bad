@@ -127,6 +127,17 @@ async function handleSubmit(inputs, setPredictionResult) {
         }
         console.log(JSON.stringify(features));
 
+        toast.warning('Making Prediction: Please wait...', {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        });
+
         const response = await fetch('https://workforcewatchapi.onrender.com/predict_bad', {
             method: 'POST',
             headers: {
@@ -151,8 +162,16 @@ async function handleSubmit(inputs, setPredictionResult) {
                 theme: "colored",
             });
         } else {
-            //TODO Netter maken
-            throw new Error('Failed to fetch data');
+            toast.error('Cant make prediction please contact the developers', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
         }
 
     } else {
